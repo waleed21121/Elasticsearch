@@ -1,0 +1,20 @@
+{
+  "name": "elasticsearch-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node ./dist/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@elastic/elasticsearch": "^9.2.1",
+    "@huggingface/transformers": "^3.8.1"
+  }
+}
