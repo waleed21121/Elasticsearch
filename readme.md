@@ -136,25 +136,3 @@ This project explores Elasticsearch as a powerful search and analytics engine in
 **stopAnalyzer()** - Standard analyzer variant that explicitly removes common words (the, a, is, etc.).
 
 **keywordAnalyzer()** - Treats entire input as a single token with no tokenization, useful for exact matching.
-
----
-
-## 💡 Usage Examples
-
-### Basic Search
-Use `searchByWord()` to find documents containing specific keywords. Elasticsearch performs full-text analysis on the input, finding relevant matches across tokenized fields.
-
-### Building Complex Queries
-Combine `multipleFilters()` with boolean logic to create sophisticated search criteria. For example, filter by description content AND optionally boost results matching age criteria.
-
-### Handling Large Datasets
-For applications with significant data, use `bulkOperation()` to insert thousands of documents efficiently. Combine with `paginateWithSearchAfter()` for scrolling through results without performance degradation.
-
-### Semantic Search
-Leverage `getEmbeddings()` and `searchIndexByEmbedding()` to find documents based on meaning rather than keywords. Ideal for recommendation systems, similarity matching, and semantic question-answering.
-
-### Data Preprocessing
-Use ingest pipelines via `addWithPipeline()` to automatically clean, normalize, and enrich data during indexing. This separates data transformation logic from application code.
-
-### Data Quality
-Use existence checks (`documentExists()`, `indexExists()`) before operations to ensure robustness and prevent errors.
